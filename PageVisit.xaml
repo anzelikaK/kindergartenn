@@ -1,0 +1,31 @@
+﻿<Page x:Class="kindergarten.PageMain.PageVisit"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:kindergarten.PageMain"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageVisit">
+
+    <Grid>
+        
+        <DataGrid x:Name="DtGridVisit" AutoGenerateColumns="False" IsReadOnly="True" Grid.Column="1" Grid.RowSpan="2" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Индекс ребенка" Binding="{Binding idChild}" Width="25*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Дата" Binding="{Binding Date}" Width="25*"/>
+                <DataGridTextColumn Header="Статус" Binding="{Binding Status}" Width="25*"/>
+                <DataGridTextColumn Header="Причина отсутствия" Binding="{Binding ReasoneOfAbsence}" Width="25*"/>
+                <DataGridTemplateColumn Width="auto">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Редактировать" Name="BtnEdit" Click="BtnEdit_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns> 
+        </DataGrid>
+        <Button Content="Добавить" Name="btnAdd" Style="{StaticResource ButtonL}" Click="btnAdd_Click" VerticalAlignment="Bottom" />
+
+    </Grid>
+</Page>

@@ -1,0 +1,52 @@
+﻿<Page x:Class="kindergarten.PageMain.PageListGroup"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:kindergarten.PageMain"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageListGroup">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="0">
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" 
+                       Text="{Binding GroupName}" Width="250" Height="40" FontSize="16" FontWeight="Bold"/>
+            <TextBlock x:Name="timeTextBlock" HorizontalAlignment="Left" VerticalAlignment="Center" 
+                       Width="200" Height="30" Margin="10,0,0,0" FontSize="14"/>
+        </StackPanel>
+
+        <TextBlock x:Name="currentDateText" Grid.Row="1" HorizontalAlignment="Center" 
+                   VerticalAlignment="Center" FontSize="14" FontWeight="Bold"/>
+
+        <DataGrid x:Name="DtGridGroupList" AutoGenerateColumns="False" Grid.Row="2" 
+                  CanUserAddRows="False" CanUserDeleteRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding Surname}" Width="*"/>
+                <DataGridTextColumn Header="Имя" Binding="{Binding NameChild}" Width="*"/>
+                <DataGridTemplateColumn Header="Присутствует" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox IsChecked="{Binding IsPresent, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                      HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Header="Причина отсутствия" 
+                                    Binding="{Binding AbsenceReason, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                                    Width="*" IsReadOnly="False"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Button x:Name="SaveButton" Grid.Row="3" Content="Сохранить посещаемость" 
+                HorizontalAlignment="Center" Width="200" Height="30" Click="SaveButton_Click"/>
+    </Grid>
+</Page>
+
