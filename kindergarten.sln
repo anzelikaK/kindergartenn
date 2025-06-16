@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34723.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kindergarten", "kindergarten.csproj", "{FCB2B224-FA78-4A07-9ECE-5CF4B044F6A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAuth", "..\TestAuth\TestAuth.csproj", "{C3D52A5A-4F64-4980-BFB1-0266E012A1FB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FCB2B224-FA78-4A07-9ECE-5CF4B044F6A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCB2B224-FA78-4A07-9ECE-5CF4B044F6A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCB2B224-FA78-4A07-9ECE-5CF4B044F6A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCB2B224-FA78-4A07-9ECE-5CF4B044F6A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3D52A5A-4F64-4980-BFB1-0266E012A1FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3D52A5A-4F64-4980-BFB1-0266E012A1FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3D52A5A-4F64-4980-BFB1-0266E012A1FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3D52A5A-4F64-4980-BFB1-0266E012A1FB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2A14B489-279C-466B-8FBB-3BE7E40B96C0}
+	EndGlobalSection
+EndGlobal

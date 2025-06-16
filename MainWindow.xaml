@@ -1,0 +1,35 @@
+﻿<Window x:Class="kindergarten.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:kindergarten"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="#FFE3C293">
+        <Grid.ColumnDefinitions >
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="25*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions> 
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="410*"/>
+        </Grid.RowDefinitions>
+
+
+        <StackPanel Grid.ColumnSpan="2" Background="#FF63804C">
+            <Label Content="Детский сад №1" FontSize="20" Height="100" Width="300" Margin="0,20,150,0"/>
+        </StackPanel>
+        <StackPanel Grid.RowSpan="2" Background="#FF63804C">
+            <Image Source="/resource/логотип.png" Height="70" Width="80" Margin="0,5,5,0"/>
+        </StackPanel>
+        <StackPanel Grid.RowSpan="2">
+            <Button x:Name="btnKid" Content="Список детей" Margin="20,110,20,0" Click="btnKid_Click" Style="{StaticResource ButtonL}"/>
+            <Button x:Name="btnTeach" Content="Список воспитателей" Margin="20,11,20,0" Click="btnTeach_Click" Style="{StaticResource ButtonL}"/>
+            <Button x:Name="btnGroup" Content="Группы" Margin="20,10,20,0" Click="btnGroup_Click" Style="{StaticResource ButtonL}"/>
+            <Button x:Name="btnMed" Content="Медицинская карта" Margin="20,10,20,0" Click="btnMed_Click" Style="{StaticResource ButtonL}"/>
+            <Button x:Name="btnVacc" Content="Прививки" Margin="20,10,20,0" Click="btnVacc_Click" Style="{StaticResource ButtonL}"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
